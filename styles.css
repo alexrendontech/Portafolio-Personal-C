@@ -1,0 +1,186 @@
+/* Variables para el modo claro (predeterminado) */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --primary-color: #0066cc;
+    --accent-color: #e9ecef;
+}
+
+/* Variables para el modo oscuro */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1e1e1e;
+    --card-bg: #2d2d2d;
+    --border-color: #444444;
+    --primary-color: #4d94ff;
+    --accent-color: #2d2d2d;
+}
+
+/* Estilos globales */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: var(--header-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--text-color) !important;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 5px;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+/* Sección de encabezado */
+.header-section {
+    background-color: var(--accent-color);
+    padding: 5rem 0;
+    margin-bottom: 3rem;
+}
+
+/* Estilos para tarjetas */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    filter: brightness(90%);
+}
+
+/* Estilos para tipografía */
+h1, h2 {
+    font-family: 'Courier New', monospace;
+}
+
+/* Estilos para el cambiador de color */
+.color-value {
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+/* Estilos para citas */
+.blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--header-bg);
+    border-top: 1px solid var(--border-color);
+    font-family: 'Courier New', monospace;
+    padding: 20px 0;
+}
+
+/* Estilos para la página de contacto */
+.contact-info i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-form .form-control {
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 102, 204, 0.25);
+}
+
+.contact-icons {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: var(--primary-color);
+}
+
+#success-message, #error-message {
+    display: none;
+}
+
+/* Estilos para listas */
+.list-group-item {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .header-section {
+        padding: 3rem 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+}
